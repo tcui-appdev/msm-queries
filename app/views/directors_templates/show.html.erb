@@ -1,0 +1,45 @@
+<h1>Director #<%= @the_director.id %></h1>
+<a href="/directors">Go back</a> | <a href="">Delete record</a>
+<dl>
+  <dt>
+    Name
+  </dt>
+  <dd>
+    <%= @the_director.name %>
+  </dd>
+
+  <dt>
+    Dob
+  </dt>
+  <dd>
+    <%= @the_director.dob %>
+  </dd>
+
+  <dt>
+    Bio
+  </dt>
+  <dd>
+    <%= @the_director.bio %>
+  </dd>
+
+  <dt>
+    Image
+  </dt>
+  <dd>
+    <img src="<%= @the_director.image %>" style="width:250px;">
+  </dd>
+
+  <dt>
+    Created at
+  </dt>
+  <dd>
+    <%= time_ago_in_words(@the_director.created_at)%> ago
+  </dd>
+
+  <dt>
+    Updated at
+  </dt>
+  <dd>
+    <%= time_ago_in_words(@the_director.updated_at) %> ago
+  </dd>
+</dl>
