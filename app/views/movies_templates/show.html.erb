@@ -1,0 +1,59 @@
+<h1>Movie #<%= @the_movie.id %></h1>
+<a href="/movies">Go back</a> | <a href="">Delete record</a>
+<dl>
+  <dt>
+    Title
+  </dt>
+  <dd>
+    <%= @the_movie.title %>
+  </dd>
+
+  <dt>
+    Year
+  </dt>
+  <dd>
+    <%= @the_movie.year %>
+  </dd>
+
+  <dt>
+    Duration
+  </dt>
+  <dd>
+    <%= @the_movie.duration %>
+  </dd>
+
+  <dt>
+    Description
+  </dt>
+  <dd>
+    <%= @the_movie.description %>
+  </dd>
+
+  <dt>
+    Image
+  </dt>
+  <dd>
+    <img src="<%= @the_movie.image %>" style="width:250px;">
+  </dd>
+
+  <dt>
+    Director
+  </dt>
+  <dd>
+    <%= @the_director %>
+  </dd>
+
+  <dt>
+    Created at
+  </dt>
+  <dd>
+    <%= time_ago_in_words(@the_movie.created_at)%> ago
+  </dd>
+
+  <dt>
+    Updated at
+  </dt>
+  <dd>
+    <%= time_ago_in_words(@the_movie.updated_at) %> ago
+  </dd>
+</dl>
